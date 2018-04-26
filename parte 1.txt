@@ -1,0 +1,10 @@
+CREATE TABLESPACE mariela_db datafile 'c:\BaseDatos\Mariela_db.dbf 20M EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+/
+CREATE PROFILE userdata LIMIT IDLE_TIME 10 FAILED_LOGIN_ATTEMPTS 3;
+/
+CREATE USER mlopez IDENTIFIED BY "MLOPEZ-123" DEFAULT TABLESPACE mari_db QUOTA UNLIMITED ON mari_db profile userdata;
+/
+GRANTconnect to mlopez;
+/
+GRANT dba to mlopez;
+/
